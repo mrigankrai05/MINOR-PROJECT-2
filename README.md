@@ -1,251 +1,206 @@
-AI Healthcare Assistant
+# 🩺 AI Healthcare Assistant
 
-An AI-powered medical report analysis platform that extracts values from uploaded medical reports, evaluates health metrics, predicts potential heart risk, and provides an interactive AI medical assistant chatbot for explanations.
+An **AI-powered medical report analysis platform** that extracts
+important health values from medical reports, evaluates them against
+standard medical ranges, predicts potential health risks, and provides
+explanations through an **AI medical assistant chatbot**.
 
-The system combines machine learning, NLP, and modern web technologies to help users better understand their medical reports.
+The project combines **Machine Learning, Natural Language Processing,
+and Full-Stack Development** to help users better understand their
+medical reports.
 
-Features
-Medical Report Upload
+------------------------------------------------------------------------
 
-Upload a PDF medical report and automatically extract important health metrics.
+# 🚀 Features
 
-Smart Value Extraction
+## 📄 Medical Report Upload
+
+Upload a **PDF medical report** and automatically extract important
+health metrics.
+
+## 🔎 Smart Value Extraction
 
 Automatically detects key health parameters such as:
 
-Hemoglobin
+-   Hemoglobin
+-   RBC (Red Blood Cells)
+-   WBC (White Blood Cells)
+-   Platelets
+-   Hematocrit
+-   MCV
+-   MCH
+-   MCHC
 
-RBC (Red Blood Cells)
+## 📊 Health Score System
 
-WBC (White Blood Cells)
+Calculates an **overall health score** based on medical ranges.
 
-Platelets
+Color indicators:
 
-Hematocrit
+-   🟢 Green → Healthy
+-   🟠 Orange → Borderline
+-   🔴 Red → Risk
 
-MCV
+## ⚠ Risk Prediction
 
-Health Score
+Predicts **heart disease risk** using a trained machine learning model.
 
-Calculates an overall health score based on medical ranges.
+## 🧠 AI Explanation
 
-Green → Healthy
-
-Orange → Borderline
-
-Red → Risk
-
-Risk Prediction
-
-Uses a machine learning model to estimate heart disease risk.
-
-AI Explanation
-
-Provides human-readable explanations for each medical parameter.
+Provides **easy-to-understand explanations** for each medical value.
 
 Example:
 
-Hemoglobin: 15 g/dL
-This is within the normal range and indicates healthy oxygen transport in the body.
+Hemoglobin: 15 g/dL\
+This value is within the normal range and indicates healthy oxygen
+transport in the body.
 
-Interactive AI Medical Assistant
+## 🤖 AI Medical Chatbot
 
-Users can ask questions about their report:
+Users can ask questions about their report such as:
 
-Example:
+-   Is my WBC normal?
+-   What does platelet count mean?
+-   Should I consult a doctor?
 
-Is my WBC normal?
-What does platelet count mean?
-Should I consult a doctor?
+Powered by **Google Gemini AI**.
 
-Powered by Google Gemini AI.
+## 📈 Medical Dashboard
 
-Medical Dashboard
+The system provides a **modern healthcare dashboard** including:
 
-Modern UI with:
+-   Extracted health values
+-   Color-coded status indicators
+-   Interactive charts
+-   Health score display
+-   Risk prediction
+-   AI chatbot
 
-Extracted values cards
+------------------------------------------------------------------------
 
-Color-coded health indicators
+# 🏗 Project Architecture
 
-Interactive charts
+Frontend (React + Vite) - Upload medical report - Display extracted
+values - Show charts and health score - AI chatbot interface
 
-Split-screen chatbot interface
+Backend (FastAPI) - PDF parsing - Value extraction - Health score
+calculation - Risk prediction - Gemini AI integration
 
-Project Architecture
+------------------------------------------------------------------------
 
-Frontend (React + Vite)
+# 🧰 Tech Stack
 
-Upload medical report
+### Frontend
 
-Display extracted values
+-   React
+-   Vite
+-   Axios
+-   CSS
 
-Show charts and health score
+### Backend
 
-AI chatbot interface
+-   FastAPI
+-   Python
+-   Uvicorn
 
-Backend (FastAPI)
+### AI / ML
 
-PDF processing
+-   Google Gemini API
+-   Medical value analysis logic
+-   Risk prediction model
 
-Medical value extraction
+### Data Processing
 
-Health score calculation
+-   PDF parsing
+-   Pattern matching
+-   Medical range classification
 
-Risk prediction
+------------------------------------------------------------------------
 
-Gemini AI integration
+# 📁 Project Structure
 
-AI Services
+AI-Healthcare-Assistant │ ├── frontend │ ├── src │ │ ├── App.jsx │ │ ├──
+App.css │ │ ├── HealthChart.jsx │ │ └── components │ │ └── Chatbot.jsx │
+├── backend │ ├── api.py │ ├── extract_values.py │ ├── report_parser.py
+│ ├── health_score.py │ ├── heart_risk.py │ ├── ai_explanation.py │ └──
+chatbot.py │ └── README.md
 
-Machine learning risk model
+------------------------------------------------------------------------
 
-Google Gemini medical assistant
+# ⚙ Installation Guide
 
-Tech Stack
-Frontend
+## Clone Repository
 
-React
+git clone https://github.com/yourusername/ai-healthcare-assistant.git cd
+ai-healthcare-assistant
 
-Vite
+------------------------------------------------------------------------
 
-Axios
+# Backend Setup
 
-CSS
-
-Backend
-
-FastAPI
-
-Python
-
-Uvicorn
-
-AI / ML
-
-Google Gemini API
-
-Medical value analysis logic
-
-Risk prediction model
-
-Data Processing
-
-PDF parsing
-
-Pattern extraction
-
-Medical range analysis
-
-Project Structure
-AI-Healthcare-Assistant
-│
-├── frontend
-│   ├── src
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── HealthChart.jsx
-│   │   └── components
-│   │        └── Chatbot.jsx
-│
-├── backend
-│   ├── api.py
-│   ├── extract_values.py
-│   ├── report_parser.py
-│   ├── health_score.py
-│   ├── heart_risk.py
-│   ├── ai_explanation.py
-│   └── chatbot.py
-│
-└── README.md
-Installation
-1. Clone the Repository
-git clone https://github.com/yourusername/ai-healthcare-assistant.git
-cd ai-healthcare-assistant
-Backend Setup
-Install dependencies
 pip install fastapi uvicorn google-genai python-multipart
-Run backend
+
+Run backend:
+
 uvicorn api:app --reload
 
-Backend will run on
+Backend runs on:
 
 http://127.0.0.1:8000
-Frontend Setup
 
-Navigate to frontend:
+------------------------------------------------------------------------
+
+# Frontend Setup
 
 cd frontend
 
-Install dependencies:
-
 npm install
-
-Run frontend:
 
 npm run dev
 
-Frontend will run on
+Frontend runs on:
 
 http://localhost:5173
-Gemini API Setup
 
-Create a Gemini API key from:
+------------------------------------------------------------------------
+
+# Gemini API Setup
+
+Generate a Gemini API key from:
 
 https://aistudio.google.com/app/apikey
 
-Then add it in chatbot.py:
+Add your key in chatbot.py
 
-client = genai.Client(api_key="YOUR_API_KEY")
-How It Works
+------------------------------------------------------------------------
 
-User uploads a medical report.
+# Application Workflow
 
-Backend extracts key medical values.
+Upload Medical Report\
+↓\
+Extract Medical Values\
+↓\
+Compare With Medical Ranges\
+↓\
+Generate Health Score\
+↓\
+Predict Health Risk\
+↓\
+Generate AI Explanation\
+↓\
+Chat With AI Medical Assistant
 
-Values are classified as Good / Borderline / Risk.
+------------------------------------------------------------------------
 
-Health score is computed.
+# ⚠ Disclaimer
 
-Risk prediction is generated.
+This project is for **educational purposes only** and should not replace
+professional medical advice. Always consult a qualified doctor for
+medical decisions.
 
-AI explanations are created.
+------------------------------------------------------------------------
 
-User can ask questions using the AI chatbot.
+# 👨‍💻 Author
 
-Example Workflow
-
-Upload Medical Report
-↓
-
-Extract Health Parameters
-↓
-
-Health Score + Risk Prediction
-↓
-
-AI Explanation
-↓
-
-Chat with AI Medical Assistant
-
-Future Improvements
-
-OCR support for scanned reports
-
-Patient history tracking
-
-Doctor consultation recommendations
-
-Voice-based AI assistant
-
-Multi-report comparison
-
-Secure medical data storage
-
-Disclaimer
-
-This project is for educational and research purposes only.
-It should not replace professional medical advice.
-
-Always consult a qualified healthcare professional for medical decisions.
+**Mrigank Rai**\
+B.Tech -- Jaypee Institute of Information Technology
