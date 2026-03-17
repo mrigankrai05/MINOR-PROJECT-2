@@ -2,18 +2,21 @@ import { useState } from "react"
 import axios from "axios"
 
 import { useRef, useEffect } from "react"
-const bottomRef = useRef()
-
-useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
-}, [messages])
 
 
 export default function Chatbot({ values }) {
 
+
+
     const [messages, setMessages] = useState([])
     const [input, setInput] = useState("")
     const [loading, setLoading] = useState(false)
+
+    const bottomRef = useRef()
+
+    useEffect(() => {
+        bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+    }, [messages])
 
     const sendMessage = async () => {
 
